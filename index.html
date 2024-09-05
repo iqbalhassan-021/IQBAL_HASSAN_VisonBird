@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="shortcut icon" href="src/images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Fox Hill</title>
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="page-cover block-center">
+            <div class="hero flex-row">
+                <div class="container-halfX flex-colum">
+                    <div class="navbar">
+                        <a href="#" class="no-decoration">
+                            <div class="the-logo center">
+                                <img src="src/images/logo.png" class="logo" alt="Logo">
+                            </div>
+                        </a>
+                        <div class="nav-tab">
+                            <a href="#" class="no-decoration">
+                                <div class="nav-button">
+                                    <p>Home</p>
+                                </div>
+                            </a>
+                            <a href="#" class="no-decoration">
+                                <div class="nav-button">
+                                    <p>Explore Land</p>
+                                </div>
+                            </a>
+                            <a href="#" class="no-decoration">
+                                <div class="nav-button">
+                                    <p>Service</p>
+                                </div>
+                            </a>
+                            <a href="#" class="no-decoration">
+                                <div class="nav-button">
+                                    <p>Advertise</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="hero-text flex-colum">
+                        <div class="tab flex-colum">
+                            <p class="big-text">
+                                Prime Residential
+                            </p>
+                            <p class="sub-text">
+                                Land For Sale
+                            </p>
+                        </div>
+                        <div class="tab flex-row">
+                            <div class="container-halfX ">
+                                <p class="bold-text">
+                                    Start your jurney with us
+                                </p>
+                                <p class="desc">
+                                    Land property can refer to land that has no structural improvements, excluding infrastructure like parking areas, roads, or utilities.
+                                </p>
+                            </div>
+                            <div class="container-halfX center">
+                                <a href="#" class="no-decoration primary-button">
+                                    Get Started
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="tab flex-colum">
+                            <p id="tempname"></p>
+                            <p id="tempcnic"></p>
+                            <p id="tempaddress"></p>
+                            <p id="tempmessage"></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container-halfX flex-colum contact-tab">
+                    <div class="slider-holder">
+                        <div class="slide">
+
+                            <div class="tab float-right">
+                            <div class="temp">
+                                <a href="#" class="no-decoration" >
+                                    Contact Us
+                                </a>
+
+                            </div>
+                            <div class="temp">
+                                <button class="primary-button" onclick="switchContact()">Contact</button>
+                            </div>
+                            </div>
+                            <div class="gap" id="gap"></div>
+                            <div class="tab bottom">
+                                <div class="tab bottom-tab" id="contactdesc">
+                                    <p class="bold-text">
+                                        Valley View Estates
+                                    </p>
+                                    <p class="" style="">
+                                        Welcome to Valley View Estates, a charming subdivision located in the heart of Tennessee. This community offers a peaceful retreat from the hustle and bustle of city life, with stunning views of the surrounding valley that will take your breath away.
+                                    </p>
+                                    <div class="tab actions">
+                                        <div class="temp">
+                                            <select name="type" id="type" class="primary ">
+                                                <option value="Land1">Land 1</option>
+                                                <option value="Land1">Land 1</option>
+                                                <option value="Land1">Land 1</option>
+                                            </select>
+                                            <select name="location" id="location" class="primary ">
+                                                <option value="location 1">location 1</option>
+                                                <option value="location 1">location 1</option>
+                                                <option value="location 1">location 1</option>
+                                            </select>
+                                        </div>
+                                        <div class="temp">
+                                            <button class="primary-button search-button">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab contact-section" id="contact">
+                                    <form class="contact-form flex-colum">
+                                        <div class="tab flex-colum">
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" placeholder="Name">
+                                        </div>
+                                        <div class="tab flex-colum">
+                                            <label for="cnic">CNIC</label>
+                                            <input type="text" name="cnic" id="cnic" placeholder="CNIC">
+                                        </div>
+                                        <div class="tab flex-colum">
+                                            <label for="address">Address</label>
+                                            <input type="text" name="address" id="address" placeholder="Address">
+                                        </div>
+                                        <div class="tab flex-colum">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" rows="5"></textarea>
+                                        </div>
+                                        <div class="tab float-right">
+                                           <button class="primary-button" onclick="HandleSubmit()">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+
+        function switchContact(){
+            let gap = document.getElementById('gap');
+            let desc = document.getElementById('contactdesc');
+            let contact = document.getElementById('contact');
+                if(desc.style.display === 'flex'){
+                    contact.style.display = 'flex';
+                    desc.style.display = 'none';
+                    gap.style.display = 'none';
+                }
+                else{
+                    contact.style.display = 'none';
+                    desc.style.display = 'flex';
+                    gap.style.display = 'flex';
+                }
+        }
+        
+
+
+        function HandleSubmit(){
+            event.preventDefault();
+            let name = document.getElementById('name').value;
+            let cnic = document.getElementById('cnic').value;
+            let address = document.getElementById('address').value;
+            let message = document.getElementById('message').value;
+
+            document.getElementById('tempname').innerHTML = "Name:" + name;
+            document.getElementById('tempcnic').innerHTML = "CNIC:" + cnic;
+            document.getElementById('tempaddress').innerHTML ="Address:" + address;
+            document.getElementById('tempmessage').innerHTML = "Message:" + message;
+            
+
+        }
+    </script>
+</body>
+</html>
